@@ -1,0 +1,2 @@
+#!/bin/bash
+python3 $BASE_PATH/service.py --start "2023-02-10 00:00:00" --end "2023-02-11 16:00:00" --dataset "$BASE_PATH/utils/datasets/dataset_interpolated_complete.csv" --samp_t 30 --INPFile "$BASE_PATH/SWMM/swmm_input.INP"

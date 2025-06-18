@@ -1,0 +1,204 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column
+}
+
+html, body, #map {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.controls, .output {
+    padding: 10px;
+    border-radius: 7px;
+    background: rgba(20,20,20,0.12);
+    backdrop-filter: blur(6px);
+    position: absolute;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: max-width ease 0.4s;
+    z-index: 9999;
+    font-size: 22px;
+    color: #616161;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.output {
+    top: unset;
+    bottom: 50px;
+    position: fixed;
+}
+
+#output {
+    width: 1000px;
+    font-size: 10px;
+    font-family: monospace;
+    padding: 10px;
+    text-align: center;
+}
+
+.controls > div {
+    padding: 5px
+}
+
+input[type="submit"] {
+    border-radius: 3px;
+    background: #4e4e4e;
+    color: white;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 5px 10px;
+}
+
+.controls select {
+    border-radius: 3px;
+    background: white;
+    color: #4e4e4e;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 5px 10px;
+}
+
+
+
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+header {
+  display: flex;
+  padding: 15px 30px 15px 30px;
+  box-shadow: -5px -1px 8px 6px #00000021;
+  background: white;
+  z-index: 900;
+  position: relative;
+  align-items: center;
+}
+
+header .logo {
+  width: 70px;
+}
+
+header .title {
+  padding-left: 20px;
+  flex-grow: 1
+}
+
+header h1 {
+  color: #235d97;
+  font-weight: normal;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.gauge {
+  position: relative;
+  text-align: center;
+  color: gray;
+  font-size: 10px;
+  height: 70px;
+  width: 70px;
+}
+
+
+.gauge > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.gauge span {
+  margin-top: 60px;
+}
+
+#gauge_perc {
+  margin-top: 33px;
+  font-weight: bold;
+  font-size: 15px;
+}
